@@ -152,7 +152,7 @@ vector<ll> get_all_divisors(ll n){vector<ll> temp;for(ll i=1; i<=sqrt(n); i++){i
 
 //========= SOLVE() ===================
 
-void joshrak(){
+void zoro(){
 //---------------------------
 ll x, y;
 cin >> x >> y;
@@ -183,7 +183,7 @@ int main(){
     cin>>testCase;
     FOR(i,1,testCase+1){
         //google(i);
-        joshrak();
+        zoro();
     }
 
     auto stop11=chrono::high_resolution_clock::now();
