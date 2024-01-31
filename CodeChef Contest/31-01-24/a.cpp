@@ -154,14 +154,18 @@ vector<ll> get_all_divisors(ll n){vector<ll> temp;for(ll i=1; i<=sqrt(n); i++){i
 
 void zoro(){
 //---------------------------
-ll n;
-cin >> n;
-vector<ll> arr(n, 0);
-for (int i = 0; i < n;i++){
-    cin >> arr[i];
+int sum = 0;
+for (int i = 0; i < 5;i++){
+    int x;
+    cin >> x;
+    sum += x;
 }
-
-//---------------------------
+if(sum>=4){
+    cout << "YES" << endl;
+}
+else{
+    cout << "NO" << endl;
+}
 }
 
 //=====================================

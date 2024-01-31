@@ -153,15 +153,37 @@ vector<ll> get_all_divisors(ll n){vector<ll> temp;for(ll i=1; i<=sqrt(n); i++){i
 //========= SOLVE() ===================
 
 void zoro(){
-//---------------------------
-ll n;
-cin >> n;
-vector<ll> arr(n, 0);
-for (int i = 0; i < n;i++){
-    cin >> arr[i];
-}
+    ll n, q;
+    cin >> n >> q;
+    string s;
+    cin >> s;
 
-//---------------------------
+    ll count = 1;
+    ll maxcount = 1;
+    for (int i = 1; i < n;i++){
+        if(s[i]==s[i-1]){
+            count++;
+        }
+        else{
+            count = 1;
+        }
+        maxcount = max(maxcount, count);
+    }
+    cout << maxcount << " ";
+    while(q--){
+        char c;
+        cin >> c;
+        s.push_back(c);
+        if(s.size()>=2 && s[s.size()-1]==s[s.size()-2]){
+            count++;
+        }
+        else{
+            count = 1;
+        }
+        maxcount = max(maxcount, count);
+        cout << maxcount << " ";
+    }
+    cout << endl;
 }
 
 //=====================================

@@ -154,14 +154,27 @@ vector<ll> get_all_divisors(ll n){vector<ll> temp;for(ll i=1; i<=sqrt(n); i++){i
 
 void zoro(){
 //---------------------------
-ll n;
-cin >> n;
+
+ll n, k;
+cin >> n >> k;
 vector<ll> arr(n, 0);
-for (int i = 0; i < n;i++){
+for (int i = 0;i<n;i++){
     cin >> arr[i];
 }
+ll sum = accumulate(arr.begin(), arr.end(), 0ll);
+ll minans = LLONG_MAX;
 
-//---------------------------
+for (int i = n - 1; i >= 0;i--){
+   if((arr[i]/k)>=1){
+       minans = min(minans, arr[i] % k);
+   }
+}
+if(minans==LLONG_MAX){
+    cout << -1 << endl;
+}
+else{
+    cout << minans << endl;
+}
 }
 
 //=====================================
